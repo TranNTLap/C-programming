@@ -12,11 +12,23 @@ namespace test_1
         {
             return a + b;  
         }
+        static int TimMax(int[] A)
+        {
+            int max = A[0];
+            for(int i = 1; i < A.Length; i++)
+            {
+                if (A[i] > max)
+                {
+                    max = A[i];
+                }
+            }
+            return max;
+
+        }
         static void Main(string[] args)
         {
-            int x = 2;
-            int y = 3;
-            Console.WriteLine(Tong(x,y));
+            int[] myNum = { 10, 20, 30, 40, 100 };
+            Console.WriteLine( TimMax(myNum));
 
         }
     }
